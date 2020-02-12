@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="07.45 - 08.00"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:id="@+id/teksmp1"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PENJASKES"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:id="@+id/teksmp2"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mulyono, S.Pd, MM"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:id="@+id/teksmp3"/>
+</LinearLayout>

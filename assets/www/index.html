@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>index</title>
+<script src="jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	var jml=1;
+	var harga=5;
+	$("#jumlah").html(jml);
+	$("#harga").html(harga);
+    $("#plus").click(function(){
+		jml++;
+		$("#jumlah").html(jml);
+		$("#harga").html(jml*harga);
+	});
+	$("#minus").click(function(){
+		if(jml<=1){jml=1;}else{jml--;};
+		$("#jumlah").html(jml);
+		$("#harga").html(jml*harga);
+	});
+	$("#order").click(function(){
+		alert("Anda membeli "+jml+" buah seharga $"+(harga*jml));
+	});
+});
+</script>
+</head><body>
+QUANTITY <a href="http://agus.com">link</a><br><br>
+<button value="+" id="plus" type="button">+</button><br>
+<br><span id="jumlah">2</span><br><br>
+<button value="-" id="minus" type="button">+</button><br><br>
+<span id="price">PRICE</span><br>$<span id="harga">10</span><br>
+<button value="+" id="order" type="button">ORDER</button>
+</body></html>
