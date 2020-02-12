@@ -13,6 +13,7 @@ import android.webkit.WebViewClient;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.ScrollView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     ImageView imgJadwal, imgGuru, imgSiswa, imgTentang, imgInfo, imgOffline;
@@ -20,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     ProgressBar progressBar1;
     ScrollView scrollView1;
     String rootUrl = "";
+
+    TextView jdwOffline;
 
     String rootUrl2 = "https://sman1balung.sch.id/webapp/";
     String urlJadwal = rootUrl2+"jadwal.php";
@@ -60,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
         imgTentang = (ImageView) findViewById(R.id.imgTentang);
         imgInfo = (ImageView) findViewById(R.id.imgInfo);
         imgOffline = (ImageView) findViewById(R.id.imgOffline);
+
+        jdwOffline = (TextView) findViewById(R.id.jdwOffline);
+        jdwOffline.setText("ok");
 
         webView1 = (WebView) findViewById(R.id.webView1);
         webView2 = (WebView) findViewById(R.id.webView2);
