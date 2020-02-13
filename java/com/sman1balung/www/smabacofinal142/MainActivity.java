@@ -3,9 +3,11 @@ package com.sman1balung.www.smabacofinal142;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
+import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
@@ -22,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
     ScrollView scrollView1;
     String rootUrl = "";
 
-    TextView jdwOffline;
+    public static String teksq="Jadwal Offline (ok)";
+    public static TextView jdwOffline;
 
     String rootUrl2 = "https://sman1balung.sch.id/webapp/";
     String urlJadwal = rootUrl2+"jadwal.php";
@@ -64,8 +67,15 @@ public class MainActivity extends AppCompatActivity {
         imgInfo = (ImageView) findViewById(R.id.imgInfo);
         imgOffline = (ImageView) findViewById(R.id.imgOffline);
 
+
         jdwOffline = (TextView) findViewById(R.id.jdwOffline);
-        jdwOffline.setText("ok");
+        jdwOffline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //Log.d("ok","ok2");
+                jdwOffline.setText(teksq);
+            }
+        });
 
         webView1 = (WebView) findViewById(R.id.webView1);
         webView2 = (WebView) findViewById(R.id.webView2);
@@ -138,6 +148,10 @@ public class MainActivity extends AppCompatActivity {
     private void loadData() {
         msP = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         versi_jadwal_device = msP.getString(TEXT,"");
+    }
+
+    public static void updateText(){
+        jdwOffline.setText("haha");
     }
 
     private void hideScroll() {

@@ -2,6 +2,8 @@ package com.sman1balung.www.smabacofinal142;
 
 import android.content.SharedPreferences;
 import android.os.AsyncTask;
+import android.util.Log;
+import android.view.View;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -61,7 +63,6 @@ public class fetchhari extends AsyncTask<Void, Void, Void> {
         MainActivity.sekarang = Integer.valueOf(singlepaarsed);
         MainActivity.waktu = Integer.valueOf(singlepaarsedwaktu);
         dataparsed = dataparsed +singlepaarsed+"\n";
-
 
         }
         } catch (MalformedURLException e) {
