@@ -1,5 +1,8 @@
 package com.sman1balung.www.smabacofinal142;
 
+import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
@@ -82,6 +85,13 @@ public class fetchData extends AsyncTask<Void, Void, Void> {
         super.onPostExecute(aVoid);
         Jadwal2Activity.pd.dismiss();
         Toast.makeText(Jadwal2Activity.ma,"Update Berhasil bos",Toast.LENGTH_LONG).show();
+        Jadwal2Activity.ma.finish();
+
+
+
+        //Jadwal2Activity.
+        //Intent intent = new Intent(getApplicationContext(),Jadwal2Activity.class);
+        //startActivity(intent);
         //Jadwal2Activity.text1.setText(dataparsed);
     }
     private void tambahIsi() {

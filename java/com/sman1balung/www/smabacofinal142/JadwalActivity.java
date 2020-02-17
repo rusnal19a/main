@@ -35,6 +35,9 @@ public class JadwalActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Berhasil",Toast.LENGTH_LONG).show();
+                finish();
+                //Toast.makeText(Jadwal2Activity.ma,"Update Berhasil bos",Toast.LENGTH_LONG).show();
                 textTest.setText("berhasil");
 
             }
