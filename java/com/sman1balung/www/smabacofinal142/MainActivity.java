@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 //Log.d("ok","ok2");
-                jdwOffline.setText(teksq);
+                //jdwOffline.setText(teksq);
             }
         });
 

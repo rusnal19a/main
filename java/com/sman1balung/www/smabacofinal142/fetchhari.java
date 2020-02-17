@@ -82,6 +82,8 @@ public class fetchhari extends AsyncTask<Void, Void, Void> {
     @Override
 protected void onPostExecute(Void aVoid) {
         super.onPostExecute(aVoid);
+
+        MainActivity.jdwOffline.setText("Jadwal Offline (ok)");
         //Jadwal2Activity.pd.dismiss();
     //Jadwal2Activity.spnhari.setSelection(Jadwal2Activity.sekarang);
         //Toast.makeText(MainActivity.this,"Hari Berhasil bos",Toast.LENGTH_LONG).show();
